@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button.xx").click(function(){
+                $("h1").addClass("đemo")
+                $("h1").hide()
+        })
+    })
+
+        $(document).ready(function(){
+            $("button#yy").click(function(){
+                $("h1").show()
+                $("h1").removeClass("đemo")
+            })
+        })
+
+        var checkClass = $("h1").hasClass("đemo");
+        if (checkClass==true){
+            $("h1").remove("đemo")
+        }
+        else {
+            $("h1").addClass("đemo")
+        }
+
+    </script>
+
+    <h1>hoc 1 so ham jquery cơ bản</h1>
+    <button class="xx">click1</button>
+    <button id="yy">click2</button>
+</body>
+</html>

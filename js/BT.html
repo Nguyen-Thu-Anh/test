@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- - tao 1 the "span"
+    + click vao the "span" lan dau thi them class "ACTIVE" vao the "span"
+    + click vao the "span" lan 2 , neu co class "ACTIVE" thi xoa class do di.
+    tuong tu lan 3 va 4.-->
+<!--bai tap 2:
+  - tao 1 the "span"
+    + click vao the "span" lan dau thi them class "ACTIVE" vao the "span" va dong thoi HIDE P di
+    + click vao the "span" lan 2 , neu co class "ACTIVE" thi xoa class do di va show the P len
+    tuong tu lan 3 va 4.-->
+
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $("span").click(function () {
+            var checkClass = $("span").hasClass("ACTIVE")
+            if (checkClass == true) {
+                $("span").removeClass("ACTIVE")
+                $("p").show();
+
+            } else {
+                $("span").addClass("ACTIVE")
+                $("p").hide();
+            }
+        })
+    </script>
+    <span>click</span>
+    <p>hello</p>
+
+    <!--- Tao 1 ul va 4 LI, cho mỗi LI 1 class hoặc ID rieng.
+   - Click vao Li có CLASS/ID nao  thi them màu vao cho Li do-->
+    <style>
+        li {
+            background-color: red;
+        }
+    </style>
+    <ul>
+        <li>class1</li>
+        <li>class2</li>
+        <li>class3</li>
+        <li>class4</li>
+    </ul>
+
+    <script>
+        /* $("li.class1").click(function () {
+             $("li.class1").css("background-color")
+         })
+         $("li.class2").click(function () {
+             $("li.class2").css("background-color")
+         })
+         $("li.class3").click(function () {
+             $("li.class3").css("background-color")
+         })
+         $("li.class4").click(function () {
+             $("li.class4").css("background-color")
+         })*/
+
+        $("li").click(function () {
+            /* this:dai dien cho the li dang click vao*/
+            $(this).css("background-color")// Lấy ra màu nền hiện tại của thẻ <li>
+        })
+
+    </script>
+</body>
+
+</html>

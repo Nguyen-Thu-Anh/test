@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style tupe="text/css">
+        p {
+            background-color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // các bước như sau: 
+            // - lấy action dừng lại 
+            // - lấy data nhập vào input và kiểm tra: 
+            // + nếu data chưa nhập thì báo lỗi 
+            // + nếu nhập rồi thì chạy action chạy
+
+            $("form").submit(function () {
+                // lấy data nhập vào value input như sau 
+                var getEmail = $("input.email").val()
+                var getPass = $("input.pass").val()
+                var x = 1;
+                // alert ra xem thử có k
+                // vì nếu a nhập emial rồi thì nó vào else
+                if (getEmail == "") {
+                    $("p.errl").text("vui lòng nhập e")
+                    x = 2
+                } else {
+                    $("p.err1").text("")
+                }
+
+                // và những đoạn code bên dưới k còn tác dụng
+                if (getPass == "") {
+                    $("p.err2").text("vui lòng nhập p")
+                    x = 2
+                }
+                else {
+                    $("p.err2").text("")
+                }
+
+                // log x ra xem nếu x=2 thì có nghĩa có 1 input nào đó chưa nhập còn x=1 thì tất cả ok hết
+
+                // giả sử giờ có nhiều input thì sao, tầm 10 cái 
+                // thì cái if sez rất dài nên cách tối ưu như sau 
+                if (getEmail != "" && getPass != "") {
+                    return true;
+                }
+
+
+                text: // có tác dụng set doạn text vào trong thẻ p
+                return false;
+                // tăng thêm 1 thẻ thứ 2 
+                // giờ k muốn hiển thị lỗi = alert muốn hiển thị như google như sau 
+            })
+        })
+    </script>
+
+    <h1>xu ly form</h1>
+    <!--có 1 cái form nhưng chưa nhập gì hết thì báo lỗi
+    ví dụ e lên google đki 1 cái form như sau
+    giờ làm thử 1 ví dụ về form như sau-->
+    <!-- action là nơi chuyển data nhập vào và chuyển sang, ví dụ ở đây là trang 24h-->
+    <!--giờ chạy thử-->
+    <form action="https://www.24h.com.vn/">
+
+        <!-- input là thẻ dùng để nhập nội dung-->
+        <!--mỗi thẻ input đều có các thuộc tính sau, value la 1 thuộc tính của input
+         tất cả những gì nhập vào đều ở bên value-->
+        <!-- vì 2 thẻ giống nhau nên đặt tên riêng cho nó-->
+        <input type="text" name="" value="" class="pass">
+        <p class="err1"></p>
+        <!--và giờ yêu cầu cầu cả 2 input đã nhập thi cho chắc, còn nếu 1 trong 2 chưa nhập thì k cho chạy và báo lỗi -->
+        <input type="text" name="" value="" class="email">
+        <p class="err2"></p>
+
+        <!-- trong form ngoài thẻ input ra thì có textarea, select option và checkbox, radio, file cái này thử nghiệm xem sao -->
+        <!-- xme nó là thẻ gì, cách chạy nhưu thế nào-->
+        <button type="" submit>SEND</button>
+    </form>
+</body>
+
+</html>

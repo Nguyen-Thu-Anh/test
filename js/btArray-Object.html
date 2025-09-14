@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--Tao 1 form có 2 input: username và email
+
+- click submit form thi lấy 2 value trên dua vao objCon, dùng xx và yy làm key cố định
+(nhớ kiêm tra xem user va email da nhap chua, chứa thi báo lỗi, ok hết thi đưa vào objCon)
+    {
+        'xx': 'baovic'
+        'yy': 'ac@gmail.com'
+    }
+sau do dua objCon vao objCha nhu sau và dùng username nhập vào làm key 
+{
+    'baovic': {
+        'xx': 'baovic'
+        'yy': 'ac@gmail.com'
+    },
+} 
+=> đưa vào local giữ lại.
+
+nhap tiep lan 2 thi them vao objcha nhu sau:
+{
+    'baovic': {
+        'xx': 'baovic'
+        'yy': 'ac@gmail.com'
+    },
+    ‘namihuong’: {
+        'xx': 'namihuong'
+        'yy': 'ac@gmail.com'
+    }
+} 
+=> đưa vào local giữ lại.
+
+tuong tu lan 3:
+{
+    'baovic': {
+        'xx': 'baovic'
+        'yy': 'ac@gmail.com'
+    },
+    ‘namihuong’: {
+        'xx': 'namihuong'
+        'yy': 'ac@gmail.com'
+    },
+    nam: {
+        'xx': 'nam'
+        'yy': 'ac@gmail.com'
+    }
+} 
+=> đưa vào local giữ lại, nghĩa là mở trong local mà ra dc định dạng như trên là ok..-->
+
+<body>
+    <form id="myForm">
+        <input type="text" value="" class="username">
+        <p class="err1"></p>
+
+        <input type="text" value="" id="email">
+        <p class="err2"></p>
+        <button type="submit">Gửi</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function () {
+
+
+
+
+                var getUser = $("input.username").val();
+                var getEmail = $("input#email").val();
+
+                if (getUser == "") {
+                    $("p.err1").text("vui lòng nhập username");
+                } else {
+                    $("p.err1").text("");
+                }
+
+                if (getEmail == "") {
+                    $("p.err2").text("vui lòng nhập email");
+                } else {
+                    $("p.err2").text("");
+                }
+
+                if (getUser != "" && getEmail != "") {
+                    // alert("ok")
+                    var objCon = {
+                        xx: getUser,
+                        yy: getEmail
+                    }
+                }
+                var objCha = {};
+
+                var xx = localStorage.getItem("daLu")
+                if (xx) {
+                    console.log(xx)
+                    objCha = JSON.parse(xx)
+                    // console.log(objCha)
+                }
+                objCha[getUser] = objCon; // thêm một object con vào object cha
+                var chuoi = JSON.stringify(objCha) // chuyển objCha thành chuỗi
+                localStorage.setItem("daLu", chuoi) // lưu chuỗi vào localStorage với tên key là daLu
+
+                console.log("Đã lưu:", objCha)
+
+
+                // trc khi them cai thu 2 vao:
+                // - vap local lay cai trc do ra trc, va set tạm vao bien nào do (objcha)
+                // - thêm cai thu 2 vao objcha, luc nay cha co 2 cai => local
+            })
+        })
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

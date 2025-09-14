@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--- Tạo tiếp 1 trang index2.html :
+  + gọi obj trong localstora ở bài 1 ra( nhớ phải kiêm tra )
+  + Dùng map để duyêt và hiển thị các value và key dưới dạng console 
+  + sau đo add thêm 1 ọbj mới vào obj cũ trc đó và đưa vao localstora.-->
+    <script>
+        var ob = localStorage.getItem("svien")
+        if (ob) {
+            console.log(ob)
+            sinhvien = JSON.parse(ob)
+            // console.log(sinhvien)
+        }
+
+        Object.values(abc).map(function (value, index) {
+            console.log(value)
+        })
+        Object.keys(abc).map(function (key, index) {
+            console.log(key)
+        })
+
+        sinhvien.contact = {
+            phone: "0763234332",
+            email: "nguyenthuanh25052005@gmail.com"
+        }
+        var newObject = JSON.stringify(sinhvien)
+        console.log(newObject)
+        localStorage.setItem(newObject)
+    </script>
+</body>
+
+</html>

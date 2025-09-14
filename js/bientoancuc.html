@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form1">
+            <input type="text" class="email" placeholder="email">
+            <p class="err1"></p>
+            <input type="password" class="class" placeholder="pass">
+            <p class="err2"></p>
+            <button type="submit">click1</button>
+        </form>
+        <form id="form2">
+            <button type="submit">click2</button>
+        </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            var x = "";
+            var y = "";
+            $(document).ready(function () {
+                $("#form1").submit(function () {
+                    var getEmail = $("input.email").val();
+                    var getPass = $("input.pass").val();
+
+                    loi = 0
+                    if (getEmail = "") {
+                        $("p.err1").text("vui long nhap email")
+                        loi = 1
+                    } else {
+                        $("p.err1").text("")
+                    }
+
+                    if (getPass == "") {
+                        $("p.err2").text("vui long nhap pass")
+                        loi = 1
+                    } else {
+                        $("p.err2").text("")
+                    }
+
+                    if (loi == 0) {
+                        alert("ok")
+                        x = getEmail;
+                        y = getPass;
+                    }
+                    return false;
+                })
+
+                $("#form2").submit(function () {
+                    alert("email: " + x)
+                    alert("pass: " + y)
+                    return false;
+                })
+            })
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!-- 
+
+<app xx = 123/>
+app.js:  props.xx => 123
+
+<app>
+    <p>123</p>
+</app>
+
+app.js: props.children =><p>123</p> -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+
+            // var xx = localStorage.getItem("hung")
+
+            // // // kiểm tra có hay k?
+            // if(xx){
+            //    console.log(xx) //=> chuoi lay ra
+
+            //     // JSON.parse: chuyên chuỗi về lại kiêu data cũ
+            //     abc  = JSON.parse(xx)
+
+            //    console.log(abc)
+            // }
+
+
+
+            var objCha = {
+
+                "baovic1": {
+                    email: "baovic1@gmail.com",
+                    name: "baovic1"
+                },
+                "baovic2": {
+                    email: "baovic2@gmail.com",
+                    name: "baovic2"
+                }
+            }
+
+
+
+            var xx = "";
+
+            Object.keys(objCha).map((key, index) => {
+
+
+
+                // xx +="<p>" +
+                //         "<a>" + objCha[key]['name'] + "</a>" +
+                //     "</p>";
+
+                xx += "<tr >" +
+                    "<td>" + objCha[key]['name'] + "</td>" +
+                    "<td>" + objCha[key]['email'] + "</td>" +
+                    "</tr> ";
+
+
+
+
+
+            })
+            console.log(xx)
+
+
+            $("tbody").append(xx);
+
+
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- <div></div> -->
+
+    <!-- ke khung ke bảng -->
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>email</th>
+                <th>ten</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

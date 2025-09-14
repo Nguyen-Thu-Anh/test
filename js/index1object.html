@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- - Tạo 1 trang index.html:
+ +  tạo obj bằng rỗng.
+ + Sau đó thêm 4 key va value vào obj để tạo 1 obj đa cấp
+  + Đưa obj đa cấp đó vào localstorage-->
+    <script>
+        var sinhvien = {}
+        sinhvien.name = "Thu Anh"
+        sinhvien.age = 22;
+        sinhvien.address = {
+            city: "Đà Nẵng",
+            street: "Âu Cơ"
+        }
+        sinhvien.skill = "HTML, CSS"
+
+        var object = JSON.stringify(sinhvien)
+        console.log(object)
+        localStorage.setItem("svien", object)
+
+
+
+    </script>
+</body>
+
+</html>

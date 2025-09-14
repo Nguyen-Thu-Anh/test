@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var data = localStorage.getItem("daLu")
+
+            if (data) {
+                var objCha = JSON.parse(data)
+                // console.log(objCha)
+            }
+
+            Object.keys(objCha).map(function (key, index) {
+                data += "<tr>" +
+                    "<td>" + objCha[key]['xx'] + "</td>" +
+                    "<td>" + objCha[key]['yy'] + "</td>" +
+                    "</tr>";
+            })
+            // console.log(data)
+            $("tbody").append(data)
+        });
+    </script>
+</body>
+<!-- ke khung ke bảng -->
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>email</th>
+            <th>ten</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+    </tbody>
+</table>
+
+</html>

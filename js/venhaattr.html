@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+
+        ul li {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 5px 10px;
+            background-color: burlywood;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="demo">
+        <ul>
+            <li class="tab" target="tt">tin tuc</li>
+            <li class="tab" target="bd">bong da</li>
+            <li class="tab" target="ttr">thoi trang</li>
+        </ul>
+
+        <div class="content">
+            <div id="tt" class="hide">
+                <img src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-08/255x170/1746707873-179-thumbnail-width740height495_anh_cat_3_2.jpg"
+                    alt="Tin Tuc">
+            </div>
+            <div id="bd" class="hide">
+                <img src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-06/255x170/2025-05-06_10-36-29-495-1746503340-507-width740height495.jpg"
+                    alt="Bong Da">
+            </div>
+            <div id="ttr" class="hide">
+                <img src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-10/455x303/adt1746837173-doi_thien_phuc_duc_fkhl__anh_cat_3_2.jpg"
+                    alt="Thoi Trang">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        // Yêu cầu:  Click vào tab nào thi show hinh ảnh con của tab đó bên dưới (sử dụng html bên dưới thêm class va id tuỳ thích)
+        // chu ý: mỗi lần click thi chỉ 1 hình ảnh dc hien thi.
+        // Nghia la click vao TINTUC  thi chi có hình ảnh của tt dc hien thi.
+        // click vao bongda thi chi có hình ảnh cua bong da dc hien thi...
+        $(document).ready(function () {
+            $(".tab").click(function () {
+                var target = $(this).attr("target");
+                $(".content div").removeClass("show").addClass("hide"); // Ẩn tất cả các ảnh
+                $(".tab").removeClass("demo"); // Xoá class active khỏi tất cả tab
+                $("#" + target).removeClass("hide").addClass("show");// hiện đúng ảnh tương ứng với tab vừa click
+                $(this).addClass("demo");
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul{
+            background-color: green;
+            text-align: center;
+        }
+        ul li {
+            display: inline-block;
+            padding: 10px;
+            color: #fff;
+            position: relative;
+        }
+        ul li:hover{
+            background-color: red;
+        }
+        ul li ul {
+            background-color: blue;
+            display: none;
+        }
+        ul li:hover ul{
+            display: block;
+            position: absolute;
+            top:100%;
+            left: 0;
+
+            width: 200px;
+        }
+        ul li ul li{
+            display: block;
+            text-align: left;
+        }
+    </style>
+
+    <ul>
+        <li>menu1
+            <!--  -->
+            <ul>
+                <li>menu1</li>
+                <li>menu1</li>
+                <li>menu1</li>
+                <li>menu1</li>
+            </ul>
+            <!--  -->
+
+        </li>
+        <li>menu1</li>
+        <li>menu1</li>
+        <li>menu1
+            <!--  -->
+            <ul>
+                <li>menu1</li>
+                <li>menu1</li>
+                <li>menu1</li>
+                <li>menu1</li>
+            </ul>
+            <!--  -->
+
+
+        </li>
+    </ul>
+    
+</body>
+</html>

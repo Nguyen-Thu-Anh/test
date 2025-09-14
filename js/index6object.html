@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--- tao index6.html
+ + lay obj bên bài index5 ra(chu y kiem tra co k)
+ + dung vòng lặp map hiển thị duy nhất 1 số 9 ra
+ + từ vào obj này, dùng MAP(hoac for) lấy các value > 5 ra và đưa vào obj mới , và consolo obj cuối cùng để xem kêt quả.
+ + dua obj mới nay vao local-->
+    <script>
+        var xx = localStorage.getItem("anh")
+        if (xx) {
+            var obj = JSON.parse(xx)
+            // console.log(xx)(obj)
+        }
+
+        Object.values(obj).map(function (value, index) {
+            if (value == 9) {
+                // console.log(value)
+            }
+        })
+
+        var newObj = {}
+        Object.keys(obj).map(function (key) { // lấy ra mảng các key của obj (dưới dạng chuỗi)
+            if (obj[key] > 5) {
+                newObj[key] = obj[key]
+            }
+        })
+        console.log(newObj)
+
+
+        var newObj = JSON.stringify(obj)
+        // console.log(newObj)
+        localStorage.setItem("anh", newObj)
+    </script>
+</body>
+
+</html>

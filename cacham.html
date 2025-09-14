@@ -1,0 +1,45 @@
+<script>
+    // jquery
+    // click vao the button có class=xx
+    $("button.xx").click(function () {
+    })
+
+    // Thêm sự kiện click cho thẻ span
+    $("span").click(function () {
+        alert("chạy rồi");
+    });
+
+    // hide : ẩn thẻ h1 
+    $("h1").hide()
+
+    // addClass: them 1 the class vao html
+    $("h1").addClass("demo")
+
+    // show: hien thi ra 
+    $("h1").show()
+
+    // removeClass: xoa class demo dem ra khoi the html 
+    $("h1").removeClass("demo")
+
+    // hasClass: Kiểm tra xem phần tử h1 có chứa lớp demo hay không
+    var checkClass = $("h1").hasClass("demo");
+    alert(checkClass); // Kiểm tra và alert xem h1 có lớp 'demo' không
+
+    // attr
+    // this: chinh la the dang click vao 
+    $(this).addClass("demo")
+
+    // ham attr: lay gtri thuoc tinh & them hoac thay doi gtri thuoc tinh 
+    // thuoc tinh: class id href src 
+    // gtri: nam ben trong thuoc tinh 
+    // lay gtri thuoc tinh 
+    var x = $(this).attr("class")
+    alert(x)
+
+    // them hoac thay doi gtri thuoc tinh
+    var y = "https://icdn.24h.com.vn/upload/1-2025/images/2025-03-05//gettyimages-2202722840-612x612-495-1741121060-464-width740height495.jpg";
+    $("img").attr("src", y)
+
+    //console.log(getId) // => hiện thị demo
+
+</script>

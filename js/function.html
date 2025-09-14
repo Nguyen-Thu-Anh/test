@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //function(ham`): 
+        //- tao ham 
+        //-goi ham
+        //event(su kien): la hanh dong tac dong vao the html :click, hover..
+
+       // tao ham demo 
+        // nhan vao 2 tham so
+       function demo(x , y, z){
+            if(z == true){
+
+                //goi ham trong ham 
+                tinhTong(x , y)
+            }else{
+                tinhNhan(x , y)
+            }
+        
+       }
+
+       //chia nho ham ra tiep 
+       function tinhTong(x , y){
+            tong = x + y;
+            alert(tong)
+       }
+
+       function tinhNhan(x , y){
+        tong = x * y;
+        alert(tong)
+        }
+
+        //cong thuc tao san 
+        function tinhSum(x, y){
+            tong = 0
+            for (var i =x ; i < y; i++){
+                tong = tong + i
+                     
+            }
+            console.log(tong)
+
+        }
+
+        function inSo110(x, y){
+            for (var i =x ; i < y; i++){
+                console.log(i)
+                     
+            }   
+        }
+
+       //goi ham ra chay 
+       // truyen 2 tham so vao ham
+       //demo(4,5)
+    </script>
+
+    <h1>viet 1 su kien onclick(click vao the html) thi ham demo dc goi</h1>
+    <button onclick="demo(3,5, true)">tinh tong</button>
+    <button onclick="demo(7,7, false)">tinh nhan</button>   
+    <button onclick="tinhSum(1, 10)">tinh tong tu 1-10</button> 
+    <button onclick="tinhSum(20, 30)">tinh tong tu 20-30</button> 
+    <button onclick="inSo110(1, 10)">in so tu 1-10</button> 
+</body>
+</html>

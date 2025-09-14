@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul {
+            background-color: aqua;
+            text-align: center;
+        }
+        ul li {
+            display: inline-block;
+            padding: 10px;
+            position: relative;
+        }
+        ul li:hover{
+            background: red;
+        }
+        ul li ul.xx {
+            background: palegoldenrod;
+            display: none;
+        }
+        ul li:hover ul.xx{
+            display: block;
+            position: absolute;
+            left: 0;
+            top:100%;
+            width: 200px;
+        }
+        ul li ul.xx li {
+            display:block;
+            text-align: left;
+        }
+        ul li ul.xx li ul {
+            background: brown;
+            display: none;
+        }
+        ul li ul.xx li:hover ul
+        {
+            display: block;
+            position: absolute;
+            left: 200px;
+            width: 200px;
+            top:0;
+        }
+    </style>
+    <ul>
+        <li>minu1
+            <!--  -->
+                <ul class="xx">
+                    <li>chinh sach
+                        <ul class="yy">
+                            <li>tin tuc</li>
+                            <li>tin tuc</li>
+                            <li>tin tuc</li>
+                            <li>tin tuc</li>
+                        </ul>
+                    </li>
+                    <li>chinh sach</li>
+                    <li>chinh sach</li>
+                </ul>
+            <!--  -->
+        </li>
+        <li>minu2
+            <ul class="xx">
+                <li>chinh sach
+                    <ul class="yy">
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                    </ul>
+                </li>
+                <li>chinh sach</li>
+                <li>chinh sach</li>
+            </ul>
+        </li>
+            
+        <li>minu3
+            <ul class="xx">
+                <li>chinh sach
+                    <ul class="yy">
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                    </ul>
+                </li>
+                <li>chinh sach
+
+                    <ul class="yy">
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                        <li>tin tuc</li>
+                    </ul>
+                </li>
+                <li>chinh sach</li>
+            </ul>
+        </li>
+        <li>minu4</li>
+    </ul>
+</body>
+</html>

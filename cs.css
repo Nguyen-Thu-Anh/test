@@ -1,0 +1,509 @@
+*{
+    /* xoa het cac css mac dinh  */
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.header{
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid red;
+}
+.header_container{
+    width: 1100px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+img.logo{
+    width: 180px;
+    height: 52px;
+}
+.header ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+.header ul li {
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+    font-size: 14px ;
+}
+/* hover (dua chuot vao)
+ */
+ .header ul li:hover {
+    color: blue;
+    border-bottom: 1px solid blue;
+ }
+.icon {
+    width: 20px;
+}
+/* ------ end header ----- */
+.container{
+    width: 1100px;
+    /* dua the nay ra giua man hinh  */
+    display: block;
+    margin: 0 auto;
+}
+.ins {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.ins li {
+    display: inline-block;
+    padding: 4px;
+    background-color: gray;
+    border-radius: 10px;
+    margin-right: 30px;
+    
+}
+.lock {
+    width: 100%;
+    display: inline-block;
+}
+.lock-left{
+    width: 310px;
+    float: left;
+}
+.lock-left li{
+    display: flex;
+    border-top: 1px gray;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+.lock-left :last-child {
+    border: 0;
+}
+.lock-left li img{
+    width: 120px;
+    float: left;
+    margin-right: 10px;
+}
+
+.lock-right {
+    width: 770px;
+    float: right;
+}
+.lock-right img {
+    width: 462.25px;
+    float: left;
+}
+.fn{
+    width: 492px;
+    float: left;
+}
+.fn h2 {
+    width: 492.04px;
+    display: inline-block;
+    color: black;
+    padding-bottom: 7px;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.fn p {
+    margin-bottom: 20px;
+}
+.up {
+    display: inline-block;
+    
+    width: 257px;
+}
+
+.up li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+}
+.up img {
+    width: 242.94px;
+    margin-bottom: 20px;
+}
+.pg {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: black;
+}
+/* ------ end lock----- */
+.ttdn {
+    width: 100%;
+    display: inline-block;
+}
+.ttdn h2 {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0;
+    text-align: left;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border-bottom: 1px solid gray;
+}
+.ttdn ul{
+    width: 1100px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.ttdn li {
+    width: 202.22px;
+    font-size: 16px;
+}
+.ttdn li img {
+    width: 100%;
+}
+/* ------ end ttdn ----- */
+.PRT {
+    width: 100%;
+    display: inline-block;
+    background-color: yellow;
+    padding: 0 10px;
+}
+.esc {
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+.esc li {
+
+    display: inline-block;
+    text-align: center;
+    padding: 4px;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+.sc-left {
+    width: 100%;
+    display: inline-block;
+}
+.sc-left li{
+    width: 258px;
+    float: left;
+    margin-left: 20px;
+}
+.sc-left li:first-child {
+    width: 539px;
+    margin-left: 0;
+}
+.sc-left img {
+    width: 100%;
+}
+/* ------ end PRT----- */
+.shift {
+    width: 100%;
+    display: inline-block;
+}
+.shift-left{
+    width: 780px;
+    float: left;
+    margin: 20px 0;
+}
+.shift-left li{
+    display: flex;
+    border-top: 1px gray;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+.shift-left :last-child {
+    border: 0;
+}
+.shift-left li img{
+    width: 257.4px;
+    float: left;
+    margin-right: 10px;
+} 
+.shift-left h3 {
+    color: black;
+    font-size: 20px;
+}
+.ctrl{
+    width: 300px;
+    float: right;
+}
+.ctrl img {
+    width: 300px;
+    height: 600px;
+   
+}
+.ctrl h2 {
+    font-size: 18px;
+}
+.pause {
+    width: 300px;
+    float: right;
+    margin: 10px 0;
+}
+.pause li {
+    display: flex;
+    border-top: 1px gray;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.pause img {
+    width: 72px;
+    float: left;
+    height: 72px;
+}
+.pause h3, .pause p {
+    margin: 0 10px;
+}
+/* ------ end shift----- */
+.enter {
+    width: 100%;
+    display: inline-block;
+}
+.enter h4 {
+    font-size: 30px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 10px 0;
+}
+.alt-left {
+    width: 814px;
+    float: left;;
+}
+.alt-left img { 
+    width: 519.55px;
+    float: left;
+    
+}
+.enter_up {
+    width: 492px;
+    float: left;
+}
+.enter h5 {
+    width: 490.81px;
+    display: inline-block;
+    color: black;
+    padding-bottom: 7px;
+    font-size: 18px;
+    margin: 20px 0;
+}
+.enter p{
+    margin-bottom: 10px;
+}
+.dn {
+    display: inline-block;
+    width: 257px;
+}
+.dn li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+    margin-left: 50px;
+}
+.dn img {
+    width: 249.48px;
+    margin-bottom: 10px;
+}
+.alt-right {
+    width: 286px;
+    float: right;
+}
+.alt-right ul {
+    width: 100px;
+    display: inline-block;
+}
+.alt-right li {
+    width: 100%;
+    display: inline-block;
+    border-top: 1px gray;
+    margin-bottom: 18px;
+}
+
+.alt-right img {
+    width: 72px;
+    float: right;
+    margin-right: 10px;
+}
+/* ------ end enter----- */
+.content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.category {
+    width: 258.5px;
+    float: left;
+    
+}
+
+.category h2 {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    margin: 0 5px;  
+    padding: 10px 0;
+    text-align: left;
+}
+.category p.anhkute {
+    font-size: 15px;
+    color: black;
+    border-bottom: 1px solid gray;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.category img {
+    width: 258.5px;
+    margin-bottom: 10px;
+}
+.news {
+    width: 258.5px;
+    float: left;
+}
+.news ul {
+    width: 100px;
+    display: inline-block;
+}
+.news li {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 18px;
+    
+    text-align: left;
+}
+.news li:first-child{
+    border-bottom: 1px solid gray;
+}
+.news img {
+    width: 105px;
+    float: left;
+    margin-right: 10px;
+}
+/* ------ end content----- */
+.magazine {
+    width: 100%;
+    display: flex;
+    background: gray;
+    justify-content: space-between;
+}
+.magazine h4 {
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 10px 0;
+}
+ul.back {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+ul.back li img {
+    width: 260px;
+    height: 435px;
+
+}
+/* ------ end manazine----- */
+.video {
+    width: 100%;
+    display: inline-block;
+}
+.dell h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+.dell-left {
+    width: 800px;
+    float: left;
+}
+.dell-left video {
+    width: 100%;
+}
+.dell-right {
+    float: right;
+    width: 280px;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.dell-right li{
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+   
+}
+.dell-right li img{
+    width: 120px;
+    margin-right: 10px;
+}
+/* ------ end .magazine----- */
+.footer {
+    width: 100%;
+    display: inline-block;
+    background: burlywood;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+.footer .container{
+    padding: 10px 0;
+}
+.container-left {
+    width: 712.88px;
+    float: left;
+}
+.container-right {
+    width: 351.09px;
+    float: right;
+}
+/* ------ end footer----- */
+.space {
+    width: 100%;
+    display: inline-block;
+}
+.space.container {
+    padding: 10px 0;
+}
+.space-left {
+    width: 740px;
+    height: 500px;
+    position: relative;
+    background-color: aqua;
+
+}
+.img.uu {
+    
+    width: 740px;
+    height: 100%;
+}
+p.pp {
+    position: absolute;
+    bottom: 0;
+    
+    z-index: 20px;
+    font-size: 30px;
+}
+/* ------ end space----- */
+.trl{
+    background-color: pink;
+    text-align: left;
+}
+.ul {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    background: palegreen;
+}
+.ul li:hover {
+    background-color: paleturquoise;
+}
+
+
+

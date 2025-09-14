@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--+ lay array bên bài index1 ra(chu y kiem tra co k)
+ + dung vòng lặp map hiển thị duy nhất 1 số 9 ra
+ + từ vào array này, dùng MAP(hoac for) lấy các value <= 5 ra và đưa vào arr mới , và consolo array cuối cùng để xem kêt quả.
+ + tương tự vào array này, dùng filter(lọc) lấy các value <= 5 ra và đưa vào arr mới , và consolo array cuối cùng để xem kêt quả.
+ + và đưa arr mới vao local-->
+
+<body>
+    <script>
+        var mang = localStorage.getItem("anhxinhdep")
+        if (mang) {
+            consolo.log(mang)
+            chuoimang = JSON.parse(mang)
+            console.log(chuoimang)
+        }
+
+        // dung vòng lặp map hiển thị duy nhất 1 số 9 ra
+        mang.map(function (value) {
+            if (value == 9) {
+                console.log(value)
+            }
+        })
+
+        // Dùng MAP hoặc FOR để lấy các value <= 5 vào mảng mới
+        var arrMap = [];
+        for (var i = 0; i < mang.length; i++) {
+            if (mang[i] <= 5) {
+                arrMap.push(mang[i])
+            }
+        }
+        console.log(arrMap)
+
+        // dùng filter(lọc) lấy các value <= 5 ra và đưa vào arr mới , và consolo array cuối 
+        var arrFilter = mang.filter(function (value) {
+            return value <= 5;
+        })
+        console.log(arrFilter)
+
+        // và đưa arr mới vao local
+        var xx = JSON.stringify(arrFilter)
+        console.log(xx)
+
+        localStorage.setItem("mangDuoi5", xx)
+
+    </script>
+</body>
+
+</html>

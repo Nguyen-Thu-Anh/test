@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--- tao index7.html
+ + lay obj bên bài index5 ra(chu y kiem tra co k)
+ + tao 1 obj mới có value 11-20
+ + merge obj cũ  va obj mới vao lại làm 1 .
+ + sau đo tinh tổng các value có trong obj mới này.
+ merge 2 obj thi tham khảo link sau:-->
+    <script>
+        var xx = localStorage.getItem("anh")
+        if (xx) {
+            var obj1 = JSON.parse(xx)
+            console.log(obj1)
+
+            var obj2 = {}
+            for (i = 11; i <= 20; i++) {
+                obj2[i] = i;
+            }
+            console.log(obj2)
+            let mergeobj = {
+                ...obj1,
+                ...obj2
+            };
+            console.log(mergeobj)
+            var tong = 0;
+            for (var i = 0; i < values.length; i++) {
+                tong += values[i];
+            }
+            console.log(tong);
+        }
+    </script>
+</body>
+
+</html>

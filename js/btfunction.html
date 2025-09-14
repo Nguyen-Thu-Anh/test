@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function inSo(x, y){
+            for(var i = 1; i < y; i++){
+                alert(i)
+            }
+        }
+    </script>
+    
+    <script>
+        function soLe(x,y){
+            for(var i =1; i<y; i++){
+                if(i%2==0){
+                    alert(i)
+
+                }
+            }
+        }
+    </script>
+    
+    <script>
+        function nhoHon5(x,y) {
+            for(var i = 1; i < y; i++){
+                if(i< 5){
+                    alert(i)
+                }
+            }
+        }
+    </script>
+
+    <script>
+        function in6So (x,y){
+            for (var i = 1; i < y; i++){
+                if ( i==6){
+                    alert(i)
+                }
+            }
+        }
+    </script>
+    <script>
+        function tinhTong(x,y){
+            tong = x + y;
+            alert(tong)
+        }
+    </script>
+
+    <h2>Tính tổng theo công thức s = 1 + 1/n</h2>
+    <input type ="number" id = "n" min = "1" placeholder="Nhập n">
+
+    <script>
+        function tinhTong(x,y){
+            tong = 0//1
+        for (var i =1 ; i < 11; i++){
+            tong = tong + 1/i
+               
+        }
+        alert(i)
+        }
+    </script>
+    <button onclick="tinhTong(1,20)">tinhTong s = 1 + 1/n </button>
+    
+    <h2>Tìm số lớn nhất trong 3 số tự nhiên</h2>
+    <label for="so1">Nhập số 1:</label>
+    <input type="so" id="so1" min="1" placeholder="Nhập số 1">
+    <br> 
+    <label for="so2">Nhập số 2:</label>
+    <input type="so" id="so2" min="1" placeholder="Nhập số 2">
+    <br>
+    <label for="so3">Nhập số 3:</label>
+    <input type="so" id="so3" min="1" placeholder="Nhập số 3">
+    <br>
+    <button onclick="soLonnhat(3,5,6)">Tìm số lớn nhất</button>
+
+    <script>
+        function soLonnhat(x,y,z){
+            if (a > b && a > c){
+                alert("a la so lon nhat " + a)
+            }
+            else if (b > a && b > c){
+                alert("b la so lon nhat" + b)
+            }
+            else {
+                alert("c la so lon nhat" + c)
+            }
+        }
+    </script>
+    <h1>su kien onclick</h1>
+    <button onclick="inSo(1,10)">in so tu 1-10</button>
+    <button onclick = "nhoHon5(1,7)">in ra cac so nho hon 5 </button>
+    <button onclick="soLe(1,10)">in cac so le</button>
+    <button onclick="in6So(1,10)">in 6 so tu 1-10</button>
+    <button onclick="tinhTong(1,10)">tinh tong tu 1-10</button>
+</body>
+</html>

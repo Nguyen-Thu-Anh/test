@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                // var x = $("a").attr("href") // lấy thuộc tính href trong thẻ a 
+                var x = $("img").attr("src") // lấy thuộc tính src trong thẻ img 
+                alert(x)
+
+                $("a").attr("class", "demo") // đặt hoặc thay đổi thuộc tính class của tất cả thẻ <a thành "demo"
+
+            })
+        })
+    </script>
+</body>
+
+</html>

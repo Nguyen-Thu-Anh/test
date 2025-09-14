@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        img.xx{
+            position: fixed;
+            right: 0;
+            width: 100px;
+            top: 0;
+            height: 100%;
+        }
+
+        img.yy{
+            position: fixed;
+            left: 0;
+            width: 100px;
+            top: 0;
+            height: 100%;
+        }
+        div{
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-color: yellow;
+        }
+        div img.anh1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 15;
+            width: 100px;
+            
+        }
+        div img.anh2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            z-index: 13;
+            
+        }
+    </style>
+
+    <img class="xx" src="https://photo.znews.vn/w360/Uploaded/zgsgtn/2025_03_12/thumb_trandaithang.jpg" />
+    <img class="yy" src="https://photo.znews.vn/w360/Uploaded/zgsgtn/2025_03_12/thumb_trandaithang.jpg" />
+
+    <div>
+        <img class="anh1" src="https://photo.znews.vn/w360/Uploaded/wyhktpu/2025_04_23/image001.jpg" />
+        <img class="anh2" src="https://photo.znews.vn/w360/Uploaded/caxwpqdwp/2025_04_04/z6472722955201_d450b9e722e3c571359c4ffa0413d805_1.jpg" />
+    </div>
+
+</body>
+</html>

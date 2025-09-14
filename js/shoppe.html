@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo ul {
+            width: 240px;
+            display: flex;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        .demo li {
+            width: 200px;
+        }
+
+        .demo li img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <img id="hinhlon"
+        src="https://cdn.24h.com.vn/upload/2-2025/images/2025-06-11//1749644394-234-thumbnail-width740height495_anh_cat_3_2.jpg" />
+
+
+    <ul class="demo">
+        <li>
+            <img class="yy"
+                src="https://cdn.24h.com.vn/upload/2-2025/images/2025-06-11/255x170/1749634996-165-thumbnail-width740height495_anh_cat_3_2.jpg">
+        </li>
+        <li>
+            <img class="yy"
+                src="https://cdn.24h.com.vn/upload/2-2025/images/2025-06-11/255x170/adt1749646094-hai-thanh-nien-3045-803__anh_cat_3_2.jpg">
+        </li>
+        <li>
+            <img class="yy"
+                src="https://cdn.24h.com.vn/upload/2-2025/images/2025-06-11/255x170/2025-06-11_17-53-53-495-1749639419-334-width740height495.jpg">
+        </li>
+        <li>
+            <img class="yy"
+                src="https://cdn.24h.com.vn/upload/2-2025/images/2025-06-11/255x170/1749632166-297-thumbnail-width740height495_anh_cat_3_2.jpg">
+        </li>
+    </ul>
+
+
+    <script>
+        // bấm vào hình ảnh nào là hiển thị ảnh đó lên ảnh lớn 
+        $("img").click(function () {
+            var src = $(this).attr("src")
+            $("img#hinhlon").attr("src", src)
+        })
+    </script>
+
+    <button class="demo">click</button>
+    <p id="demo">Click on this paragraph</p>
+
+    <script>
+        // giải thích code 
+        $(document).ready(function () {
+            $("button").click(function () { // khia báo biến button là thẻthẻ
+                var getClass = $(this).attr("class");  // khai báo 1 biến getClass chứa giá trị của thuộc tính class mà this đang được click vàovào
+                $("p#" + getClass).addClass("acctive"); // thẻ p có id giống với class, getclass là biến của button được click thêm lớp active vào thẻ p 
+            })
+        });
+
+    </script>
+    <!--getCLass alert ra se là "demo"
+
+p# + getClass, nghĩa la p#demo
+
+la chỉ tới the p có id=demo
+
+và thêm class active vào thẻ này
+
+bài này ngoài đọc hiểu ra thi chu y 1 điểm
+
+ta có thể dùng class cua button để tác động vào id cua the p
+
+mien sao class va id giống tên nhau-->
+</body>
+
+</html>

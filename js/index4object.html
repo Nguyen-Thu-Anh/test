@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--lây obj : tuong tu cac phan trc do
+ + hiển thị ra xem đã xoá thằng obj ở bài 3 chưa?-->
+    <script>
+        var ob = localStorage.getItem("svien");
+
+        if (ob) {
+            var sinhvien = JSON.parse(ob);
+
+            console.log("Object hiện tại")
+            console.log(sinhvien);
+
+            Object.values(sinhvien).map(function (value, index) {
+                console.log(value)
+            })
+            Object.keys(sinhvien).map(function (key, index) {
+                console.log(key)
+            })
+
+            if (sinhvien.contact) {
+                console.log("contact vẫn còn tồn tại ")
+            } else {
+                console.log("contact bị xóa")
+            }
+
+        } else {
+            console.log("Không tìm thấy object svien")
+        }
+    </script>
+</body>
+
+</html>

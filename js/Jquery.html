@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+	<style type="text/css">
+		.demo{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- jquery(phần nâng cao js, viet code gọn hơn, nhanh hơn) -->
+
+	<!-- goi thư viện của nó vào -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            // click vao the button có class=xx
+            $("button.xx").click(function(){
+
+              // hide: ẩn đi
+              // $("h1").hide()
+              
+
+              // addClass: thêm 1 class vao the html
+              $("h1").addClass("demo")
+            })
+
+            // click vao the button có id=yy
+            $("button#yy").click(function(){
+
+              // show:hien thi ra
+              // $("h1").show()
+
+              // removeClass: xoa class demo ra khoi the html
+             //  $("h1").removeClass("demo")
+              // hasClass: kiem tra 1 class có trong the html k?
+              // - neu có thi tra ve true
+              // - k thi tra ve false
+
+              // kiem tra the h1 có class DEMO k?
+              var checkClass = $("h1").hasClass("demo");
+
+              // alert(checkClass)
+              // - neu có class DEMO trong the h1 thi xoá class DEMO di 
+              // - neu k có class DEMO trong the h1 thi thêm class DEMO vao 
+              if(checkClass==true){
+                $("h1").removeClass("demo")
+              }else{
+                $("h1").addClass("demo")
+              }
+            })
+        	//---------------
+            $("span").click(function(){
+                alert("chay roi")
+            })
+    
+        })
+        
+    </script>
+
+   
+    <h1>hoc 1 số hàm jquery cơ bản</h1>
+    <button class="xx">click1</button>
+    <button id="yy">click2</button>
+    
+    <span>aaaa</span>
+</body>
+</html>

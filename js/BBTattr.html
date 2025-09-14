@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--click vao hình nhỏ nào thi hien thi hình đó lên hình lớn-->
+    <!--<style>
+        .up div {
+            width: 100%;
+            display: inline-block;
+            align-items: center;
+        }
+        .XX img{
+            width: 40%;
+            float: left;
+            margin-bottom: 10px;
+        }
+        .YY {
+            width: 100%;
+            display: flex; 
+            
+        
+        }
+        
+        .YY li {
+            margin-right: 30px; 
+            list-style-type: none;
+        } 
+        .YY img {
+            width: 143px; 
+            display: inline-block;
+        }
+        
+    </style>
+
+    <div class="up">
+        <!-- Ảnh lớn để thay đổi -->
+        <div class="XX">
+            <img id="main-img" src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-03//gettyimages-2213179118-612x612-495-1746274384-712-width740height495.jpg">
+        </div>
+
+        <!--ảnh nhỏ -->
+        <ul class="YY"> 
+            <li><img src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-03/255x170/9-495-1746281702-697-width740height495_anh_cat_4_3.jpg"></li>
+            <li><img src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-06/255x170/1746492110-221-thumbnail-width740height495_anh_cat_3_2.jpg"></li>
+            <li><img src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-03/255x170/gettyimages-2213178467-612x612-495-1746272593-128-width740height495_anh_cat_4_3.jpg"></li>
+            <li><img src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-06/255x170/1746498685-582-thumbnail-width740height495_anh_cat_3_2.jpg"></li>
+            <li><img src="https://cdn.24h.com.vn/upload/2-2025/images/2025-05-03/255x170/2025-05-03_15-33-40-495-1746261667-458-width740height495_anh_cat_4_3.jpg"></li>
+        </ul>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- Script thay đổi ảnh -->
+    <script>
+        $(document).ready(function(){
+            $('.YY img').click(function(){
+                var newSrc = $(this).attr('src');
+                $('#main-img').attr('src', newSrc);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+

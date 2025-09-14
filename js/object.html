@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // tiếp phần thứ 2 là object, nó cung như mảng, nhưng đa dạng hơn
+
+        // khai bao 1 object rỗng như sau
+        var demo1 = {}
+
+        // thêm value vao object thi có 2 cach
+        demo1['xx'] = "hoang anh"
+        demo1.yy = "bao vic"
+
+        // nghia la dùng dấu "." hay "[]" đều dc. 
+
+
+        console.log(demo1)
+        // 
+        // key: value
+        // xx:"hoang anh"
+        // yy:"bao vic"
+
+        // key do mình tự tạo ra
+        // value thi có thể la số, chuỗi, hoặc chứa luôn array va object(gọi là đa cấp)
+
+        // tương tự array de lấy length ra thi:
+        // console.log(Object.keys(demo1).length)
+        // và kiem tra object có data k thi tuong tu arr
+
+        if (Object.keys(demo1).length > 0) {
+            // console.log("co")
+        }
+
+        // cú phap lay 1 value ra thi cung tuong tu arr
+        // tên-obj[key]
+
+        // vdu de lay bao vic ra
+        // console.log(demo1['yy'])
+
+
+
+
+        // giờ tạo nhanh 1 obj con như sau:
+        var demo2 = {
+            city: "da nang",
+            name: "thanh khe"
+        }
+        // demo2['city'] = "da nang"
+        // demo2['name'] = "thanh khe"
+
+
+
+        // giờ đưa obj này vao làm obj con cua demo1, dung "abc" làm key như sau:
+        demo1["abc"] = demo2;
+
+        console.log(demo1)
+        // tương tư de lay "thanh khe" ra thi lay theo key cha va con
+
+        console.log(demo1['abc']['city'])
+
+
+        // lay arr mảng2 tren kia đưa vào obj và dùng "xyz" làm key nay
+        demo1["xyz"] = mang2;
+        console.log(demo1)
+        // console.log(demo1['xyz'][3])
+
+        // do key cua obj k pai la số nên k dung for dc, ta phai dung hàm MAP rieng cho nó
+
+        // mang2.map(function(value, key){
+        // }
+
+        // map trong object
+        Object.values(demo1).map(function (value, index) {
+            // console.log(index) //=> tra ve các số thu tu
+            // 
+            // console.log(value)  //=> tra ve cac value cha 
+
+        })
+
+        Object.keys(demo1).map(function (key, index) {
+            console.log(key)
+        })
+    </script>
+</body>
+
+</html>

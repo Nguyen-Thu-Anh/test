@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        p {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // cho action dừng lai
+            // - kiem tra the input da nhap chua
+            //     + neu chua nhâp thi bao loi
+            //     + neu nhap thi cho chạy action
+
+            // submit: chi dành cho form
+            $("form").submit(function () {
+
+                // lấy gia tri nhập vao the input
+                var getEmail = $("input.email").val();
+                var getPass = $("input#pass").val();
+                // alert(getValue)
+
+                if (getEmail == "") {
+
+                    // text: gán đoan text vao the p
+                    $("p.err1").text("vui long nhap email")
+                } else {
+                    $("p.err1").text("")
+                }
+
+                if (getPass == "") {
+
+                    // text: gán đoan text vao the p
+                    $("p.err2").text("vui long nhap pass")
+                } else {
+                    $("p.err2").text("")
+                }
+
+                // neu ca 2 đã nhâp
+                if (getEmail != "" && getPass != "") {
+                    alert("ok")
+                    return true;
+                }
+
+                // dừng action lai
+                return false;
+            })
+        })
+
+    </script>
+
+
+    <h1>xu ly form</h1>
+    <!-- action: chuyen all data qua link trong action -->
+    <form action="https://www.24h.com.vn/">
+
+
+        <input type="text" value="" class="email">
+        <p class="err1"></p>
+
+        <input type="text" value="" id="pass">
+        <p class="err2"></p>
+
+        <!-- luon co 1  nut button de click vao -->
+        <button type="submit">click</button>
+    </form>
+
+
+</body>
+
+</html>

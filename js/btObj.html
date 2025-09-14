@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--tạo obj như thế này 'bao1': {
+                'xx': 'baovic',
+                'yy': 'baovic@gmail.com'
+            },
+            'bao2': {
+                'xx': 'baovic2',
+                'yy': 'baovic@gmail.com2'
+            },
+            'bao3': {
+                'xx': 'baovic3',
+                'yy': 'baovic@gmail.com3'
+            },
+            'bao4': {
+                'xx': 'baovic4',
+                'yy': 'baovic@gmail.com4'
+            } dùng map hoặc for để hiện thị ra bao1-baovic, bao2-baovic2,  bao3-baovic3, bao4-baovic4-->
+
+<body>
+    <script>
+        objCha = {
+            'bao1': {
+                'xx': 'baovic',
+                'yy': 'baovic@gmail.com'
+            },
+            'bao2': {
+                'xx': 'baovic2',
+                'yy': 'baovic@gmail.com2'
+            },
+            'bao3': {
+                'xx': 'baovic3',
+                'yy': 'baovic@gmail.com3'
+            },
+            'bao4': {
+                'xx': 'baovic4',
+                'yy': 'baovic@gmail.com4'
+            }
+        }
+        Object.keys(objCha).map(function (key, index) {
+            console.log(key + "-" + objCha[key]['xx'])
+        })
+    </script>
+</body>
+
+</html>
